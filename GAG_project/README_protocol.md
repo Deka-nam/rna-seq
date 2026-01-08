@@ -243,6 +243,8 @@ sessionInfo()
 4. Love MI, et al. (2014). *Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2*. Genome Biology 15:550.
 
 ---
+**TL;DR**
+- *This protocol documents the re-analysis of catheterization RNA-seq data with specific focus on GAG/CS pathway genes. All steps were performed to ensure reproducibility and transparency.*
+---
 
-*This protocol documents the re-analysis of catheterization RNA-seq data with specific focus on GAG/CS pathway genes. All steps were performed to ensure reproducibility and transparency.*
-*This specific file was formatted using Deepseek for clarity in writing and github uodate only. Biological question, protocol decisions and analysis was done by the Armbruster Lab without AI help.*
+*This specific file was formatted using Deepseek for clarity in writing and github uodate only. Biological question, protocol decisions and analysis was done by the Armbruster Lab - Chelsie E. Armbruster, Ph.D. & Vits Brix, MS is to be credited for the experimental question and Namrata Deka, MS for analysis.*
