@@ -1,14 +1,14 @@
 #!/bin/bash
 
-#SBATCH --job-name=hiset2        # Job name
-#SBATCH --output=hiset2_%j.log   # Output log file (%j will be replaced by the job ID)
-#SBATCH --error=hiset2_%j.err    # Error log file
-#SBATCH --time=50:00:00                # Time limit hrs:min:sec (adjust as necessary)
-#SBATCH --ntasks=1                     # Number of tasks (processes)
-#SBATCH --cpus-per-task=32              # Number of CPU cores per task
-#SBATCH --mem=32G                       # Total memory limit
-#SBATCH --partition=scavenger    # Partition name
-#SBATCH --qos=scavenger                 # QoS name (change to a valid QoS)
+#SBATCH --job-name=hiset2                # Job name
+#SBATCH --output=hiset2_%j.log           # Output log file (%j will be replaced by the job ID)
+#SBATCH --error=hiset2_%j.err            # Error log file
+#SBATCH --time=10:00:00                  # Time limit hrs:min:sec (adjust as necessary)
+#SBATCH --ntasks=1                       # Number of tasks (processes)
+#SBATCH --cpus-per-task=32               # Number of CPU cores per task
+#SBATCH --mem=32G                        # Total memory limit
+#SBATCH --partition=scavenger            # Partition name
+#SBATCH --qos=scavenger                  # QoS name (change to a valid QoS)
 #SBATCH --cluster=ub-hpc
 
 
