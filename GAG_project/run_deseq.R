@@ -183,10 +183,11 @@ cat("\nStep 7: Creating visualizations...\n")
 dir.create("results/plots", showWarnings = FALSE)
 
 # 8.1 Volcano plot
+
 volcano_data <- res_df
 volcano_data$significant <- !is.na(volcano_data$padj) & volcano_data$padj < 0.05
 volcano_data$color <- ifelse(volcano_data$significant, "red", "gray")
-volcano_data$color <- ifelse(volcano_data$SYMBOL %in% gag_cs_genes, "blue", volcano_data$color)
+volcano_data$color <- ifelse(volcano_data$SYMBOL %in% gag_cs_genes, "blue", volcano_data$color)   
 
 p_volcano <- ggplot(volcano_data, aes(x = log2FoldChange, y = -log10(pvalue))) +
   geom_point(aes(color = color), alpha = 0.6, size = 1) +
@@ -199,6 +200,9 @@ p_volcano <- ggplot(volcano_data, aes(x = log2FoldChange, y = -log10(pvalue))) +
   geom_hline(yintercept = -log10(0.05), linetype = "dashed", alpha = 0.5)
 
 ggsave("results/plots/volcano_plot.png", p_volcano, width = 8, height = 6)
+
+# Update Jan 8, 2026: not very informative, too clustered, need to filter genes and add labelling. 
+
 
 # 8.2 Heatmap of top genes
 top_genes <- head(res_df[!is.na(res_df$padj) & res_df$padj < 0.05, ], 50)
@@ -222,11 +226,13 @@ if (nrow(top_genes) > 5) {
   dev.off()
 }
 
+# Update Jan 8, 2026: Good visualization. Useful and Informative. 
+
 # 8.3 MA plot
 png("results/plots/MA_plot.png", width = 800, height = 600)
 plotMA(res, main = "MA Plot: Catheterized vs Naive", ylim = c(-5, 5))
 dev.off()
-
+# Update Jan 8, 2026: not very informative, too clustered; redo
 
 # 9. CREATE SUMMARY REPORT
 
