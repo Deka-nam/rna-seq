@@ -58,26 +58,25 @@ Instead of spending excessive time troubleshooting the obsolete HTSeq tool, I ad
 
 | Component | 2016 Paper | Our updated approach | Reason for change |
 |-----------|------------|----------------------|-------------------|
-| **Gene Counting** | HTSeq (2016) | **featureCounts** (modern) | More robust, handles formatting issues better, industry standard |
-| **Alignment** | Tophat2 (obsolete) | **HISAT2** (direct successor) | Same algorithm family, 5x faster, actively maintained |
-| **Quality Control** | Limited | **Comprehensive** (MultiQC) | Better detection of technical issues |
-| **Software Versions** | 2016 releases | **2023 updates** | Security, bug fixes, improved algorithms |
+| **Gene Counting** | HTSeq (2016) | featureCounts | More robust, handles formatting issues better, industry standard |
+| **Alignment** | Tophat2 (obsolete) | HISAT2 | Same algorithm family, 5x faster, actively maintained |
+| **Software Versions** | 2016 releases | 2023 updates | Security, bug fixes, improved algorithms |
 
-### **Why featureCounts Over HTSeq?**
+### **Why featureCounts over HTSeq?**
 1. **Robustness:** featureCounts handles chromosome naming inconsistencies gracefully
 2. **Accuracy:** Better management of multi-mapping reads and overlapping features
 3. **Speed:** 5-10 times faster processing
 4. **Active Development:** Regularly updated vs HTSeq which is largely deprecated
 5. **Industry Standard:** Used in most current RNA-seq studies
 
-### **Maintaining Scientific Comparability**
+### **Maintaining scientific somparability**
 Despite these technical changes, I preserved the core statistical methodology:
 - Same **DESeq2** algorithm for differential expression
 - Same **significance thresholds** (padj < 0.05)
 - Same **comparison**: Catheterized (samples 4-6) vs Naive (samples 1-3)
 - Same **biological question** and gene focus
 
-## **How We Ensure Result Reliability**
+## **How we ensure result reliability**
 
 ### **Validation Measures**
 1. **Consistency Check:** Our top differentially expressed genes should substantially overlap with the paper's top 200
@@ -85,13 +84,13 @@ Despite these technical changes, I preserved the core statistical methodology:
 3. **Technical QC:** All samples showed >87% alignment rates and good quality metrics
 4. **Reproducibility:** Complete documentation for every step
 
-### **Advantages of Our Updated Pipeline**
+### **Advantages of our updated pipeline**
 1. **More Accurate Quantification:** featureCounts uses better algorithms for assigning reads to genes
 2. **Better Error Detection:** Comprehensive QC catches issues early
 3. **Future-proofing:** Uses currently supported tools that others can replicate
 4. **Transparency:** Complete logs and intermediate files available
 
-## **Addressing the Core Biological Question**
+## **Addressing the core biological question**
 
 The methodological updates do not change our ability to answer the biological question about GAG/CS genes. 
 The updated methods provide more reliable results due to:
@@ -99,9 +98,9 @@ The updated methods provide more reliable results due to:
 - More accurate count estimation at transcript boundaries
 - Reduced technical artifacts
 
-## **Practical Notes**
+## **Practical notes**
 
-### **For GAG/CS Gene Analysis:**
+### **For GAG/CS gene analysis:**
 - We can confidently identify which GAG genes are significantly altered
 - Fold-change estimates will be more accurate
 - We can compare our GAG findings with the paper's immune-focused results
@@ -114,3 +113,7 @@ The changes represent evolutionary improvements in bioinformatics tools rather t
 Our results will be directly comparable to the original study for validation purposes while providing more reliable data for our specific investigation of GAG/CS pathway genes.
 
 The updated pipeline actually gives us greater confidence in our findings regarding catheterization's impact on GAG biology, as we are using more robust, modern tools that better handle the complexities of RNA-seq data analysis.
+
+---
+
+*This specific writeup was formatted using Deepseek for clarity in writing and github update only. Changes in protocol belong to the Armbruster Lab and author Namrata Deka.*
