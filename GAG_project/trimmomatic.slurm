@@ -1,20 +1,20 @@
 #!/bin/bash
 
-#SBATCH --job-name=trim_KK        # Job name
-#SBATCH --output=trim_KK_%j.log   # Output log file (%j will be replaced by the job ID)
-#SBATCH --error=trim_KK_%j.err    # Error log file
-#SBATCH --time=50:00:00                # Time limit hrs:min:sec (adjust as necessary)
-#SBATCH --ntasks=1                     # Number of tasks (processes)
-#SBATCH --cpus-per-task=16              # Number of CPU cores per task
-#SBATCH --mem=32G                       # Total memory limit
-#SBATCH --partition=general-compute    # Partition name
+#SBATCH --job-name=trim_KK                    # Job name
+#SBATCH --output=trim_KK_%j.log               # Output log file (%j will be replaced by the job ID)
+#SBATCH --error=trim_KK_%j.err                # Error log file
+#SBATCH --time=01:00:00                        # Time limit hrs:min:sec (adjust as necessary)
+#SBATCH --ntasks=1                             # Number of tasks (processes)
+#SBATCH --cpus-per-task=16                      # Number of CPU cores per task
+#SBATCH --mem=32G                               # Total memory limit
+#SBATCH --partition=general-compute            # Partition name
 #SBATCH --qos=general-compute                   # QoS name (change to a valid QoS)
 #SBATCH --cluster=ub-hpc
 
 # load trimmomatic
 module load trimmomatic/0.39-Java-11.0.16
 
-FASTQDIR="/projects/academic/chelsiea/ndeka/rnaseq_B6_kimkline/bladder_B6/fastqfiles"
+FASTQDIR="/path/to/fastqfiles"
 
 # Iterate over R1 files
 for r1 in ${FASTQDIR}/*_1.fastq; do
