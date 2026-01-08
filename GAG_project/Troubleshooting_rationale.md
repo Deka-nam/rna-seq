@@ -3,7 +3,7 @@
 
 ## **Original objective and approach**
 
-We set out to reanalyze RNA-seq data from the 2016 Kline et al. study on bladder catheterization in B6 mice, with a specific focus 
+We set out to reanalyze RNA-seq data from the 2016 Rousseau et al. study on bladder catheterization in B6 mice, with a specific focus 
 not addressed in the original paper to determine whether genes involved in chondroitin sulfate (CS) glycosaminoglycan (GAG) production and modification are impacted by catheterization.
 
 The original study identified thousands of differentially expressed genes but only published the top 200. 
