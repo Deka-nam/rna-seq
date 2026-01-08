@@ -3,7 +3,7 @@
 ## **Experimental Question**
 **Does bladder catheterization alter the expression of genes involved in chondroitin sulfate (CS) glycosaminoglycan (GAG) production and modification in C57BL/6 mice?**
 
-*Background:* This study reanalyzes RNA-seq data from Kline et al. (2016) [JCI Insight 1(15):e88178](https://insight.jci.org/articles/view/88178#SEC4) to investigate the impact of urinary catheterization on GAG/CS pathway genes, which were not examined in the original publication.
+*Background:* This study reanalyzes RNA-seq data from Rousseau et al. (2016) [JCI Insight 1(15):e88178](https://insight.jci.org/articles/view/88178#SEC4) to investigate the impact of urinary catheterization on GAG/CS pathway genes, which were not examined in the original publication.
 
 ## **Data Source**
 - **Original Study:** Kline et al. (2016) "Bladder catheterization increases susceptibility to infection that can be prevented by prophylactic antibiotic treatment"
